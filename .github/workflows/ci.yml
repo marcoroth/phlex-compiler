@@ -4,6 +4,7 @@ on:
     branches: ['main']
   pull_request:
     branches: ['main']
+
 jobs:
   specs:
     strategy:
@@ -18,10 +19,7 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: ${{ matrix.ruby-version }}
-          bundler-cache: false
-
-      - name: Bundle Install
-        run: bundle install
+          bundler-cache: true
 
       - name: Tests
         run: bundle exec sus

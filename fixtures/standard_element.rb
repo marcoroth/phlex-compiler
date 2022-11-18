@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# rubocop:disable Style/MethodCallWithoutArgsParentheses
 module Fixtures
 	module StandardElement
 		class WithParens < Phlex::HTML
@@ -85,3 +86,5 @@ module Fixtures
 		end
 	end
 end
+
+# rubocop:enable Style/MethodCallWithoutArgsParentheses

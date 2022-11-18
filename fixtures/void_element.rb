@@ -4,7 +4,7 @@ module Fixtures
 	module VoidElement
 		class WithParens < Phlex::HTML
 			def template
-				img()
+				img() # rubocop:disable Style/MethodCallWithoutArgsParentheses
 			end
 		end
 

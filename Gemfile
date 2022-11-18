@@ -11,3 +11,7 @@ gem "rubocop"
 gem "solargraph"
 gem "sus"
 gem "syntax_suggest"
+
+group :test do
+	gem "covered"
+end

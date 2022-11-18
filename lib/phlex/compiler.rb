@@ -29,7 +29,7 @@ module Phlex
 
 		def redefine(method, line:)
 			patch = scope + method + unscope
-			eval(patch, Kernel.binding, file, (line - 1))
+			eval(patch, Kernel.binding, file, (line - 1)) # rubocop:disable Security/Eval
 		end
 
 		def scope
